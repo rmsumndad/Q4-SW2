@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&family=Great+Vibes&family=IBM+Plex+Mono:wght@300&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+	<title>Q4 Seatwork 2</title>
+<style>
+
+h2{
+	color: #0A4D68;
+	font-family: 'Great Vibes', cursive;
+	font-size: 50px;
+}
+
+
+h1{
+	font-family: 'Great Vibes', cursive;
+	color: #394867;
+	font-size: 80px;
+}
+
+#today{
+	color: white;
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+#fdiv{
+	margin-top: 5%;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+	
+#div1{
+		margin-top: 5%;
+}
+body{
+		background-color: #8294C4;
+}
+
+#div3{
+		margin-top: 5%;
+		background-color: #ACB1D6;
+		border-style: dashed;
+		color: #394867;
+		font-family: 'Chivo Mono', monospace;
+}
+
+#div5{
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 5%;
+	border-style: dashed;
+	background-color: #DBDFEA;
+	color: #394867;
+	font-family: 'Source Code Pro', monospace;
+}
+</style>
+</head>
+<body onload="alert('Welcome to Farenheit - Celcius, Convert Now!')">
+<div id="fdiv">
+	<h1 align="center">Farenheit - Celcius</h1>
+</div>
+<div class="container" >
+	<div class="row">
+		<div id="div1" class="col-sm-4"><br>
+			<h2 align="center">Date and Time:</h2>
+			<p id="today" align="center"></p>
+		</div> <br><br>
+		<div id="div2" class="col-sm-1"><br>
+			<h2 align="center"></h2>
+		</div> 
+		<div id="div3" class="col-sm-7"><br>
+			 <table class="table table-striped">
+			 	<h3>Other Information:</h3>
+    				<thead>
+     					<tr>
+      					 <th>Celsius</th>
+       					 <th>Fahrenheit</th>
+        				 <th>Description</th>
+      					</tr>
+    				</thead>
+    				<tbody>
+      					<tr>
+        				 <td>-273.15</td>
+       					 <td>-459.67</td>
+       					 <td>Absolute zero temperature</td>
+     			 		</tr>
+      					<tr>
+        				 <td>0</td>
+        				 <td>32.0</td>
+         				 <td>Freezing/melting point of water</td>
+      					</tr>
+      					<tr>
+        				 <td>21</td>
+       					 <td>69.8</td>
+       					 <td>Room temperature</td>
+      					</tr>
+      					<tr>
+      					 <td>37 </td>
+      	      			 <td>98.6 </td>
+          				 <td>Average body temperature</td>
+       					</tr>
+       					<tr>
+      					 <td>100</td>
+          				 <td>212.0</td>
+       					 <td>Boiling point of water</td>
+      					</tr>
+    				</tbody>
+  			</table>
+		</div> 
+	</div>
+</div>
+
+<div id="div5" align="center"><br>
+	<h3>Convert Farenheit to Celcius</h3><br>
+	<form>
+		 <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"><br><br>
+	<p>Celcius: <span id="outputCelcius"></span></p><br>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/.5556;
+}		
+	</script>
+	</form>
+</div><br><br>
+
+<script>
+		const date = new Date()
+		document.getElementById("today").innerHTML = date;
+</script>
+
+
+</body>
+</html>
